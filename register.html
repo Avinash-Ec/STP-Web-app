@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>STP/Sign Up</title>
+  <link rel="stylesheet" href="./Register.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="signup-box">
+    <h1>Sign Up</h1>
+    <h4>It's free and only takes a minute</h4>
+    <form action="./index.html" onsubmit="return validation()">
+      
+      <input type="text" placeholder="First Name" />
+      <p></p>
+
+      
+      <input type="text" placeholder="Last Name" />
+      <p></p>
+
+      
+      <input type="email" placeholder="Email" />
+      <p></p>
+
+      
+      <input type="password" placeholder="Password" />
+      <p></p>
+
+
+      
+      <input type="password" placeholder="Confirm Password" />
+      <p></p>
+
+      <p id="message"></p>
+      <input type="submit" value="Submit" id="btn" />
+    </form>
+
+
+    <p id="p1">
+      By clicking the Sign Up button,you agree to our <br />
+      <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+    </p>
+
+    <p class="para-2" id="p2">
+      Already have an account? <a href="./Login.html">Login here</a>
+    </p>
+  </div>
+
+  
+
+
+  <script>
+    function validation() {
+      const input = document.getElementsByTagName("input")
+      const message = document.getElementsByTagName("p")
+      const inp1 = input[0].value
+      const inp2 = input[1].value
+      const inp3 = input[2].value
+      const inp4 = input[3].value
+      const inp5 = input[4].value
+
+      var username = /^[a-zA-Z]{2,}$/
+      
+      var password = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@$%^&*])[a-zA-Z0-9!@$%^&*]{3,}$/
+
+      var email = /^[a-zA-a-zA-Z0-9.]{3,}@{1}[A-Za-z]{2,}.{1}[a-zA-Z]{2,}$/
+
+      
+      //Checking if firstname consits 2 words or not
+      if (username.test(inp1)) {
+        message[0].innerHTML = ""
+      }
+      else {
+        message[0].innerHTML = "Firstname must have 2 characters "
+        message[0].style.color = "red"
+        return false;
+      }
+
+      //Checking if lastname consits 2 words or not
+      if (username.test(inp2)) {
+        message[1].innerHTML = ""
+      }
+      else {
+        message[1].innerHTML = "Lastname must have 2 characters "
+        message[1].style.color = "red"
+        return false;
+      }
+
+      //Checking if email is valid or not
+      if (email.test(inp3)) {
+        message[2].innerHTML = ""
+      }
+      else {
+        message[2].innerHTML = "Please Enter valid Email."
+        message[2].style.color = "red"
+        return false;
+      }
+
+      //Checking if password matches with regex condition or not
+      if (password.test(inp4)) {
+        message[3].innerHTML = ""
+      }
+      else {
+        message[3].innerHTML = "Please Enter Strong password."
+        message[3].style.color = "red"
+        return false;
+      }
+
+      //Checking if password and reenterd password matches or not.
+      if (inp5==inp4) {
+        message[4].innerHTML = ""
+      }
+      else {
+        message[4].innerHTML = "Password doesn't Match."
+        message[4].style.color = "red"
+        return false;
+      }
+
+      //Storing email and password in local Storage.
+      if (inp1 && inp2 && inp3 && inp4 && inp5) {
+        localStorage.setItem(inp3, inp5)
+        location.reload()
+      }
+      else {
+        message[5].innerHTML = "All Fields are Mandatory."
+        message[5].style.color = "red"
+        return false
+      }
+    }
+  </script>
+</body>
+
+</html>

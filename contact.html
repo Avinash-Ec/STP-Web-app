@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STP/Contact</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header id="navigation">
+        <div id="nav-head">
+            <div id="nav-job">
+                <a href="./Login.html">Login</a>
+                <p>|</p>
+                <a href="./register.html">Register</a>
+                <p>|</p>
+            </div>
+        </div>
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <a href="#">STP</a>
+                    <p>Strategic <br>
+                        Technology <br>
+                        Partners
+                    </p>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+    </header>
+
+    <section id="contact">
+        <div>
+            <div id="contact-message">
+                <h1>Contact us</h1>
+                <p>Call or email us. We would love to hear from you.</p>
+            </div>
+            <div id="contact-m">
+                <div class="contact-section">
+                    <h1>Headquarters</h1>
+                    <p>
+                        3033 Wilson Blvd. Suite <br>700 Arlington, VA 22201
+                    </p>
+                </div>
+                <div class="contact-section">
+                    <h1>Phone:</h1>
+                    <p>703.842.0684</p>
+                    <h1>Fax:</h1>
+                    <p>703.842.0684</p>
+                    <h1>Email</h1>
+                    <a href="mailto: info@stpfederal.com">info@stpfederal.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="form">
+        <form action="mailto:info@stpfederal.com" method="post" enctype="text/plain">
+            <div class="contact-form">
+                <h2 align="center">Contact</h2>
+                <!-- <label for="name">Company name</label> -->
+                <input type="text" name="Company-name" id="name" class="gap" placeholder="*Name">
+
+                <!-- <label for="email">Email</label> -->
+                <input type="email" name="Email" id="email" class="gap" placeholder="*Email">
+
+                <!-- <label for="phonenumber">Contact Number</label> -->
+                <input type="number" name="Contact-number" id="phonenumber" class="gap" placeholder="*Contact number">
+
+                <!-- <label for="textarea">Message</label> -->
+                <textarea name="Message" id="textarea" class="gap" placeholder="*Message"></textarea>
+                <button>Send</button>
+
+            </div>
+        </form>
+    </div>
+
+<script src="./index.js"></script>
+</body>
+
+</html>
